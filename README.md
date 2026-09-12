@@ -27,3 +27,19 @@ The default configuration includes (example):
 - environment
 
 Use `get_config_value()` to retrieve a configuration value and `merge_config()` to apply overrides.
+
+## Text Utilities Examples
+
+Text helpers are available from `src.text_utils`:
+
+```python
+from src.text_utils import (
+    normalize_text,
+    reverse_text,
+    word_count,
+)
+
+normalize_text("  Hello   World  ")
+reverse_text("hello")
+word_count("one two three")
+```
