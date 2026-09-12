@@ -1,5 +1,8 @@
+NORMALIZED_SEPARATOR = " "
+
+
 def normalize_text(text: str) -> str:
-    return " ".join(text.strip().lower().split())
+    return NORMALIZED_SEPARATOR.join(text.strip().lower().split())
 
 
 def reverse_text(text: str) -> str:
