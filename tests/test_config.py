@@ -2,7 +2,8 @@ from src.config import (
     DEFAULT_CONFIG,
     get_config_value,
     merge_config,
-)
+
+    validate_config,)
 
 
 def test_default_timeout():
@@ -44,3 +45,11 @@ def test_database_timeout_config():
         get_config_value("database_timeout")
         == 10
     )
+
+def test_validate_config():
+    assert validate_config(DEFAULT_CONFIG) is True
+
+    invalid = DEFAULT_CONFIG.copy()
+    invalid["timeout"] = -1
+
+    assert validate_config(invalid) is False

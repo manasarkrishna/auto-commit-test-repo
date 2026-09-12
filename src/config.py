@@ -19,3 +19,27 @@ def merge_config(overrides: dict) -> dict:
     config = DEFAULT_CONFIG.copy()
     config.update(overrides)
     return config
+
+def validate_config(config: dict) -> bool:
+    if not isinstance(config.get("debug"), bool):
+        return False
+
+    if not isinstance(config.get("timeout"), int):
+        return False
+
+    if config["timeout"] < 0:
+        return False
+
+    if not isinstance(config.get("max_retries"), int):
+        return False
+
+    if config["max_retries"] < 0:
+        return False
+
+    if not isinstance(
+        config.get("environment"),
+        str,
+    ):
+        return False
+
+    return True
