@@ -38,3 +38,7 @@ def percentage(value: float, percent: float) -> float:
 
 def square(value: float) -> float:
     return value * value
+
+
+def sum_values(values: list[float]) -> float:
+    return sum(values)
