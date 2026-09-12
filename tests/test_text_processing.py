@@ -15,3 +15,9 @@ def test_contains_word_empty_word():
 
 def test_uppercase_text_empty_string():
     assert uppercase_text("") == ""
+
+def test_contains_word_is_case_sensitive():
+    assert contains_word(
+        "Hello world",
+        "hello",
+    ) is False
