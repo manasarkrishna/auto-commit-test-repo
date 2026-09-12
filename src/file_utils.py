@@ -40,3 +40,6 @@ def get_file_size_mb(path: str) -> float:
 
 def get_file_stem(path: str) -> str:
     return Path(path).stem
+
+def get_absolute_path(path: str) -> str:
+    return str(Path(path).resolve())

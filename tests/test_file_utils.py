@@ -5,6 +5,7 @@ from src.file_utils import (
     get_file_size,
     get_file_size_mb,
     get_file_stem,
+    get_absolute_path,
 )
 
 
@@ -56,3 +57,9 @@ def test_get_file_size_mb(tmp_path):
 def test_get_file_stem():
     assert get_file_stem("reports/data.csv") == "data"
     assert get_file_stem("README") == "README"
+
+def test_get_absolute_path():
+    from pathlib import Path
+
+    result = get_absolute_path("example.txt")
+    assert Path(result).is_absolute()
