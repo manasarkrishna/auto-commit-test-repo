@@ -2,6 +2,7 @@
 
 
 DEFAULT_CONFIG = {
+    "database_timeout": 10,
     "feature_enabled": False,
     "debug": False,
     "timeout": 30,

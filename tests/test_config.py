@@ -38,3 +38,9 @@ def test_merge_config():
 
 def test_feature_enabled_config():
     assert get_config_value("feature_enabled") is False
+
+def test_database_timeout_config():
+    assert (
+        get_config_value("database_timeout")
+        == 10
+    )
