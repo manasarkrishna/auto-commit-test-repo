@@ -4,6 +4,7 @@ from src.file_utils import (
     write_text_file,
     get_file_size,
     get_file_size_mb,
+    get_file_stem,
 )
 
 
@@ -51,3 +52,7 @@ def test_get_file_size_mb(tmp_path):
     assert get_file_size_mb(
         str(file)
     ) == 1.0
+
+def test_get_file_stem():
+    assert get_file_stem("reports/data.csv") == "data"
+    assert get_file_stem("README") == "README"
