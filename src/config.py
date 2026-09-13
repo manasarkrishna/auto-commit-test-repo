@@ -1,4 +1,4 @@
-"""Config utilities."""
+"""Configuration defaults and helper functions."""
 
 
 DEFAULT_CONFIG = {
