@@ -43,3 +43,19 @@ normalize_text("  Hello   World  ")
 reverse_text("hello")
 word_count("one two three")
 ```
+
+## Validator Examples
+
+Validation helpers are available from `src.validator`:
+
+```python
+from src.validator import (
+    is_valid_email,
+    is_valid_age,
+    is_valid_username,
+)
+
+is_valid_email("user@example.com")
+is_valid_age(25)
+is_valid_username("developer")
+```
