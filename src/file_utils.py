@@ -43,3 +43,10 @@ def get_file_stem(path: str) -> str:
 
 def get_absolute_path(path: str) -> str:
     return str(Path(path).resolve())
+
+def append_text_file(path: str, content: str) -> None:
+    with Path(path).open(
+        "a",
+        encoding="utf-8",
+    ) as file:
+        file.write(content)

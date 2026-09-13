@@ -6,6 +6,7 @@ from src.file_utils import (
     get_file_size_mb,
     get_file_stem,
     get_absolute_path,
+    append_text_file,
 )
 
 
@@ -63,3 +64,20 @@ def test_get_absolute_path():
 
     result = get_absolute_path("example.txt")
     assert Path(result).is_absolute()
+
+def test_append_text_file(tmp_path):
+    file = tmp_path / "append.txt"
+
+    file.write_text(
+        "hello",
+        encoding="utf-8",
+    )
+
+    append_text_file(
+        str(file),
+        " world",
+    )
+
+    assert file.read_text(
+        encoding="utf-8"
+    ) == "hello world"
