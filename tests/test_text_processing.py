@@ -21,3 +21,6 @@ def test_contains_word_is_case_sensitive():
         "Hello world",
         "hello",
     ) is False
+
+def test_reverse_text_unicode():
+    assert reverse_text("café") == "éfac"
