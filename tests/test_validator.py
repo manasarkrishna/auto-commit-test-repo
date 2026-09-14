@@ -66,3 +66,8 @@ def test_username_empty():
     from src.validator import is_valid_username
 
     assert is_valid_username("") is False
+
+def test_email_missing_at_symbol():
+    from src.validator import is_valid_email
+
+    assert is_valid_email("user.example.com") is False
