@@ -50,3 +50,8 @@ def append_text_file(path: str, content: str) -> None:
         encoding="utf-8",
     ) as file:
         file.write(content)
+
+def read_text_lines(path: str) -> list[str]:
+    return Path(path).read_text(
+        encoding="utf-8"
+    ).splitlines()

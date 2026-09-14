@@ -7,6 +7,7 @@ from src.file_utils import (
     get_file_stem,
     get_absolute_path,
     append_text_file,
+    read_text_lines,
 )
 
 
@@ -81,3 +82,17 @@ def test_append_text_file(tmp_path):
     assert file.read_text(
         encoding="utf-8"
     ) == "hello world"
+
+def test_read_text_lines(tmp_path):
+    file = tmp_path / "lines.txt"
+
+    file.write_text(
+        "first\nsecond\nthird\n",
+        encoding="utf-8",
+    )
+
+    assert read_text_lines(str(file)) == [
+        "first",
+        "second",
+        "third",
+    ]
