@@ -12,6 +12,7 @@ def read_text_file(path: str) -> str:
 
 
 def write_text_file(path: str, content: str) -> None:
+    """Write content to a UTF-8 text file."""
     Path(path).write_text(content, encoding="utf-8")
 
 
