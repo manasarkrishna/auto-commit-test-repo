@@ -55,3 +55,9 @@ def read_text_lines(path: str) -> list[str]:
     return Path(path).read_text(
         encoding="utf-8"
     ).splitlines()
+
+def ensure_directory(path: str) -> None:
+    Path(path).mkdir(
+        parents=True,
+        exist_ok=True,
+    )

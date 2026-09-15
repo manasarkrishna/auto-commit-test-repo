@@ -8,6 +8,7 @@ from src.file_utils import (
     get_absolute_path,
     append_text_file,
     read_text_lines,
+    ensure_directory,
 )
 
 
@@ -96,3 +97,10 @@ def test_read_text_lines(tmp_path):
         "second",
         "third",
     ]
+
+def test_ensure_directory(tmp_path):
+    directory = tmp_path / "nested" / "folder"
+
+    ensure_directory(str(directory))
+
+    assert directory.is_dir()
