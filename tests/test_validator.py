@@ -71,3 +71,8 @@ def test_email_missing_at_symbol():
     from src.validator import is_valid_email
 
     assert is_valid_email("user.example.com") is False
+
+def test_password_short_value():
+    from src.validator import has_valid_password_length
+
+    assert has_valid_password_length("short") is False
