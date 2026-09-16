@@ -59,3 +59,8 @@ is_valid_email("user@example.com")
 is_valid_age(25)
 is_valid_username("developer")
 ```
+
+## Usage
+
+Import the project helpers from the `src` package and call the
+functions that match the operation you need.
