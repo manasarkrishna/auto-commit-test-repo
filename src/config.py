@@ -12,6 +12,7 @@ DEFAULT_CONFIG = {
 
 
 def get_config_value(key: str):
+    """Return a configuration value by key."""
     return DEFAULT_CONFIG.get(key)
 
 
