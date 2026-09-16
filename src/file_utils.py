@@ -62,3 +62,6 @@ def ensure_directory(path: str) -> None:
         parents=True,
         exist_ok=True,
     )
+
+def get_parent_name(path: str) -> str:
+    return Path(path).parent.name

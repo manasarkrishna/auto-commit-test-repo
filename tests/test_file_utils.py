@@ -9,6 +9,7 @@ from src.file_utils import (
     append_text_file,
     read_text_lines,
     ensure_directory,
+    get_parent_name,
 )
 
 
@@ -104,3 +105,8 @@ def test_ensure_directory(tmp_path):
     ensure_directory(str(directory))
 
     assert directory.is_dir()
+
+def test_get_parent_name():
+    assert get_parent_name(
+        "reports/data.csv"
+    ) == "reports"
