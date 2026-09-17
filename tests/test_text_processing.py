@@ -29,3 +29,6 @@ def test_normalize_text_preserves_punctuation():
     assert normalize_text(
         "  Hello,   World!  "
     ) == "hello, world!"
+
+def test_reverse_text_empty_string():
+    assert reverse_text("") == ""
