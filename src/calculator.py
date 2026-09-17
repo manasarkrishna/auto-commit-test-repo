@@ -60,3 +60,11 @@ def median(values: list[float]) -> float:
         ordered[middle - 1]
         + ordered[middle]
     ) / 2
+
+
+def maximum(values: list[float]) -> float:
+    if not values:
+        raise ValueError(
+            "values cannot be empty"
+        )
+    return max(values)
