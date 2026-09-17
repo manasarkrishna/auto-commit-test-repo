@@ -24,3 +24,8 @@ def test_contains_word_is_case_sensitive():
 
 def test_reverse_text_unicode():
     assert reverse_text("café") == "éfac"
+
+def test_normalize_text_preserves_punctuation():
+    assert normalize_text(
+        "  Hello,   World!  "
+    ) == "hello, world!"
