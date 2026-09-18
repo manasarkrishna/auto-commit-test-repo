@@ -32,3 +32,6 @@ def test_normalize_text_preserves_punctuation():
 
 def test_reverse_text_empty_string():
     assert reverse_text("") == ""
+
+def test_reverse_text_single_character():
+    assert reverse_text("x") == "x"
