@@ -35,3 +35,6 @@ def test_reverse_text_empty_string():
 
 def test_reverse_text_single_character():
     assert reverse_text("x") == "x"
+
+def test_uppercase_text_mixed_case():
+    assert uppercase_text("Hello World") == "HELLO WORLD"
