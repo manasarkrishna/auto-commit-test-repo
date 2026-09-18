@@ -53,3 +53,6 @@ def test_validate_config():
     invalid["timeout"] = -1
 
     assert validate_config(invalid) is False
+
+def test_request_timeout_config():
+    assert get_config_value("request_timeout") == 15
