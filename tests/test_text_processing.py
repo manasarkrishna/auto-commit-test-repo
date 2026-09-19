@@ -38,3 +38,6 @@ def test_reverse_text_single_character():
 
 def test_uppercase_text_mixed_case():
     assert uppercase_text("Hello World") == "HELLO WORLD"
+
+def test_character_count_unicode():
+    assert character_count("café") == 4
