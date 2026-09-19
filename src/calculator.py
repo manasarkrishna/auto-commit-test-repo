@@ -68,3 +68,7 @@ def maximum(values: list[float]) -> float:
             "values cannot be empty"
         )
     return max(values)
+
+
+def cube(value: float) -> float:
+    return value * value * value
