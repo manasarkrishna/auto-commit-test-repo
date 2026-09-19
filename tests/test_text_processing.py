@@ -41,3 +41,6 @@ def test_uppercase_text_mixed_case():
 
 def test_character_count_unicode():
     assert character_count("café") == 4
+
+def test_reverse_text_with_spaces():
+    assert reverse_text("hello world") == "dlrow olleh"
