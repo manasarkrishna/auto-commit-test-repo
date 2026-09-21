@@ -72,3 +72,7 @@ def maximum(values: list[float]) -> float:
 
 def cube(value: float) -> float:
     return value * value * value
+
+
+def percentage_fraction(percent: float) -> float:
+    return percent / 100
