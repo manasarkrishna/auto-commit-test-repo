@@ -65,3 +65,6 @@ def ensure_directory(path: str) -> None:
 
 def get_parent_name(path: str) -> str:
     return Path(path).parent.name
+
+def is_file_empty(path: str) -> bool:
+    return Path(path).stat().st_size == 0
