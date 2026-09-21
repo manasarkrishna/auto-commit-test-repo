@@ -1,3 +1,5 @@
+"""Validation helpers for common input checks."""
+
 import re
 
 
