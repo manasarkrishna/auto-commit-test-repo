@@ -70,3 +70,13 @@ functions that match the operation you need.
 Helpers raise standard Python exceptions when an operation cannot
 be completed with the supplied input. Callers should validate
 inputs and handle expected exceptions where appropriate.
+
+## Contributing
+
+Before submitting changes:
+
+- Make the required code or documentation change.
+- Add or update tests when appropriate.
+- Run the complete test suite.
+- Review the changes with Git.
+- Commit the changes with a clear commit message.
