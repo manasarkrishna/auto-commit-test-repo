@@ -64,3 +64,9 @@ is_valid_username("developer")
 
 Import the project helpers from the `src` package and call the
 functions that match the operation you need.
+
+## Error Handling
+
+Helpers raise standard Python exceptions when an operation cannot
+be completed with the supplied input. Callers should validate
+inputs and handle expected exceptions where appropriate.
