@@ -3,7 +3,8 @@ from src.config import (
     get_config_value,
     merge_config,
 
-    validate_config,)
+    validate_config,
+    build_config,)
 
 
 def test_default_timeout():
@@ -56,3 +57,9 @@ def test_validate_config():
 
 def test_request_timeout_config():
     assert get_config_value("request_timeout") == 15
+
+def test_build_config():
+    config = build_config()
+
+    assert config == DEFAULT_CONFIG
+    assert config is not DEFAULT_CONFIG

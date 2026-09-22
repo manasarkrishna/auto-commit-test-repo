@@ -45,3 +45,6 @@ def validate_config(config: dict) -> bool:
         return False
 
     return True
+
+def build_config() -> dict:
+    return DEFAULT_CONFIG.copy()
