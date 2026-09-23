@@ -75,3 +75,6 @@ def test_get_required_config():
 
     with pytest.raises(KeyError):
         get_required_config("missing")
+
+def test_region_config():
+    assert get_config_value("region") == "local"
