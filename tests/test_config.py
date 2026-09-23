@@ -1,10 +1,13 @@
+import pytest
+
 from src.config import (
     DEFAULT_CONFIG,
     get_config_value,
     merge_config,
 
     validate_config,
-    build_config,)
+    build_config,
+    get_required_config,)
 
 
 def test_default_timeout():
@@ -63,3 +66,12 @@ def test_build_config():
 
     assert config == DEFAULT_CONFIG
     assert config is not DEFAULT_CONFIG
+
+def test_get_required_config():
+    assert (
+        get_required_config("timeout")
+        == 30
+    )
+
+    with pytest.raises(KeyError):
+        get_required_config("missing")

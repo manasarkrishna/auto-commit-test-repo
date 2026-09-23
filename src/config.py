@@ -48,3 +48,11 @@ def validate_config(config: dict) -> bool:
 
 def build_config() -> dict:
     return DEFAULT_CONFIG.copy()
+
+def get_required_config(key: str):
+    if key not in DEFAULT_CONFIG:
+        raise KeyError(
+            f"Missing required configuration: {key}"
+        )
+
+    return DEFAULT_CONFIG[key]
