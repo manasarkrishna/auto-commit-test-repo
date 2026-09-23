@@ -9,6 +9,7 @@ def is_valid_email(email: str) -> bool:
 
 
 def is_valid_age(age: int) -> bool:
+    """Return whether age is within the supported range."""
     return 0 <= age <= 120
 
 
