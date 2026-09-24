@@ -76,3 +76,14 @@ def cube(value: float) -> float:
 
 def percentage_fraction(percent: float) -> float:
     return percent / 100
+
+
+def factorial(value: int) -> int:
+    if value < 0:
+        raise ValueError(
+            "Factorial is not defined for negative values"
+        )
+    result = 1
+    for number in range(2, value + 1):
+        result *= number
+    return result
