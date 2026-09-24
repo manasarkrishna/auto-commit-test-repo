@@ -80,3 +80,13 @@ Before submitting changes:
 - Run the complete test suite.
 - Review the changes with Git.
 - Commit the changes with a clear commit message.
+
+## Testing
+
+Run the complete test suite with:
+
+```bash
+python -m pytest
+```
+
+The tests cover the calculator, text utilities, validators, configuration utilities, and file utilities.
