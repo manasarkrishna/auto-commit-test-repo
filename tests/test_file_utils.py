@@ -11,6 +11,7 @@ from src.file_utils import (
     ensure_directory,
     get_parent_name,
     is_file_empty,
+    is_regular_file,
 )
 
 
@@ -121,3 +122,22 @@ def test_is_file_empty(tmp_path):
 
     assert is_file_empty(str(empty_file)) is True
     assert is_file_empty(str(content_file)) is False
+
+def test_is_regular_file(tmp_path):
+    file = tmp_path / "data.txt"
+    directory = tmp_path / "folder"
+
+    file.write_text(
+        "data",
+        encoding="utf-8",
+    )
+
+    directory.mkdir()
+
+    assert is_regular_file(
+        str(file)
+    ) is True
+
+    assert is_regular_file(
+        str(directory)
+    ) is False

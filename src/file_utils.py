@@ -68,3 +68,6 @@ def get_parent_name(path: str) -> str:
 
 def is_file_empty(path: str) -> bool:
     return Path(path).stat().st_size == 0
+
+def is_regular_file(path: str) -> bool:
+    return Path(path).is_file()
