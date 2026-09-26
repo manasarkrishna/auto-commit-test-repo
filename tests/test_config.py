@@ -78,3 +78,6 @@ def test_get_required_config():
 
 def test_region_config():
     assert get_config_value("region") == "local"
+
+def test_cache_enabled_config():
+    assert get_config_value("cache_enabled") is True

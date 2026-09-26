@@ -2,6 +2,7 @@
 
 
 DEFAULT_CONFIG = {
+    "cache_enabled": True,
     "region": "local",
     "request_timeout": 15,
     "database_timeout": 10,
