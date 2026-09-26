@@ -58,3 +58,6 @@ def get_required_config(key: str):
         )
 
     return DEFAULT_CONFIG[key]
+
+def copy_config(config: dict) -> dict:
+    return config.copy()

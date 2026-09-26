@@ -7,7 +7,8 @@ from src.config import (
 
     validate_config,
     build_config,
-    get_required_config,)
+    get_required_config,
+    copy_config,)
 
 
 def test_default_timeout():
@@ -81,3 +82,10 @@ def test_region_config():
 
 def test_cache_enabled_config():
     assert get_config_value("cache_enabled") is True
+
+def test_copy_config():
+    original = {"timeout": 30}
+    copied = copy_config(original)
+
+    assert copied == original
+    assert copied is not original
