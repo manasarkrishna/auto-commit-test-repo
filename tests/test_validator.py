@@ -81,3 +81,7 @@ def test_email_missing_domain():
     from src.validator import is_valid_email
 
     assert is_valid_email("user@") is False
+
+def test_username_rejects_special_characters():
+    assert is_valid_username("user_name") is False
+    assert is_valid_username("user-name") is False
