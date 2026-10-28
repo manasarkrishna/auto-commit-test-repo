@@ -2,6 +2,7 @@
 
 
 DEFAULT_CONFIG = {
+    "environment_name": "local",
     "cache_enabled": True,
     "region": "local",
     "request_timeout": 15,

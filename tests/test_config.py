@@ -89,3 +89,6 @@ def test_copy_config():
 
     assert copied == original
     assert copied is not original
+
+def test_environment_name_config():
+    assert get_config_value("environment_name") == "local"
