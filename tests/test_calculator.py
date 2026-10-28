@@ -77,3 +77,10 @@ def test_multiply_by_zero():
 
 def test_percentage_fraction():
     assert percentage(80, 12.5) == 10
+
+def test_divide_by_zero_raises():
+    import pytest
+    from src.calculator import divide
+
+    with pytest.raises(ValueError):
+        divide(10, 0)
